@@ -8,7 +8,7 @@ module Suspenders
           group: %i[development test],
           git: "https://github.com/rubysec/bundler-audit.git",
           branch: "0.7.0"
-      Bundler.with_clean_env { run "bundle install" }
+      Bundler.with_unbundled_env { run "bundle install" }
     end
 
     def rake_task
